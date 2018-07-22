@@ -12,3 +12,8 @@ Dockerfile for petergardfjall/garminexport
 # Refresh downloaded activities
 
 docker run -v /local/path/to/GarminData/:/data/:rw docker_garminexport
+
+# If Garmin download fails, clone latest code from petergardfjall/garminexport
+
+0. docker build --no-cache -t docker_garminexport .
+1. docker run -v /local/path/to/GarminData/:/data/:rw docker_garminexport
